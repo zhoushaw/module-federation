@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = (_,argv)=>({
   output: {
-    publicPath: argv.mode === 'development'? "http://localhost:8080/": 'https://module-fedration-host.vercel.app/',
+    publicPath: argv.mode === 'development'? "http://localhost:8080/": 'https://module-federation-host.vercel.app/',
   },
 
   resolve: {
