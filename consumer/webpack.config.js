@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = (_,argv)=> ({
   output: {
+    libraryTarget: 'umd',
     publicPath: argv.mode === 'development'? "http://localhost:8081/": 'https://module-federation-consumer.vercel.app/',
   },
 
@@ -13,6 +14,8 @@ module.exports = (_,argv)=> ({
   devServer: {
     port: 8081,
   },
+  
+  devtool: "source-map",
 
   module: {
     rules: [
